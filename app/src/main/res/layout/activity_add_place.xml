@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Nav.HomeFragment.AddPlaceActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back_btn"
+                android:background="@drawable/ripple_effect"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_medium"
+                android:text="Add Place"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/my_blue"/>
+
+            <ImageView
+                android:id="@+id/done_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_check_24"
+                android:layout_marginEnd="18dp"
+                app:tint="@color/my_sky_blue"
+                android:background="@drawable/ripple_effect"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/image_progress_bar"
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:padding="105dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"/>
+
+            <FrameLayout
+                android:id="@+id/edit_place_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/place_pic"
+                    android:layout_width="350dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/add_image_ico"
+                    app:civ_border_color="@color/grey"
+                    android:scaleType="fitCenter"
+                    app:shapeAppearanceOverlay="@style/roundedCornersImageView"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/place_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/white"
+                android:layout_marginTop="25dp"
+                app:boxStrokeColor="@color/grey"
+                app:hintTextColor="@color/grey">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/place_name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Place Name"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:maxLength="25"
+                    android:ellipsize="end"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/place_location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/white"
+                android:layout_marginTop="25dp"
+                app:boxStrokeColor="@color/grey"
+                app:hintTextColor="@color/grey">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/place_location_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Location"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="textPostalAddress"
+                    android:maxLines="1"
+                    android:maxLength="40"
+                    android:ellipsize="end"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/place_description_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/white"
+                android:layout_marginTop="25dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="150"
+                app:boxStrokeColor="@color/grey"
+                app:hintTextColor="@color/grey">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/place_description_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+                    android:maxLength="250"
+                    android:minLines="1"
+                    android:maxLines="8"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="textMultiLine"
+                    android:ellipsize="end"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

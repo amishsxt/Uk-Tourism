@@ -1,0 +1,36 @@
+package com.example.uktourism.Views.Nav.ProfileFragment.Tab.UserPlacesAdapter;
+
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.uktourism.R;
+import com.google.android.material.imageview.ShapeableImageView;
+
+public class UserPostsViewHolder extends RecyclerView.ViewHolder {
+
+    ShapeableImageView placePic;
+    TextView placeName,placeLocation;
+    FrameLayout card;
+    ProgressBar imgProgressbar;
+    LinearLayout linearLayout;
+    ImageView deleteBtn;
+
+    public UserPostsViewHolder(@NonNull View itemView) {
+        super(itemView);
+
+        placePic=itemView.findViewById(R.id.place_pic);
+        placeName=itemView.findViewById(R.id.place_name);
+        placeLocation=itemView.findViewById(R.id.place_location);
+        card=itemView.findViewById(R.id.card);
+        imgProgressbar=itemView.findViewById(R.id.image_progress_bar);
+        linearLayout=itemView.findViewById(R.id.linear_layout);
+        deleteBtn=itemView.findViewById(R.id.delete_btn);
+    }
+}
